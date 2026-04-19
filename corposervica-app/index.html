@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Corposervica</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <h2>CORPOSERVICA PORTUGUESA</h2>
+
+    <form id="formReporte">
+
+        <!-- 🔹 CLIENTE FIJO -->
+        <label>Cliente</label>
+        <input type="text" id="cliente" value="CORPOELEC S/E TUREN 1 la colonia" readonly>
+
+        <!-- 🔹 UBICACIÓN -->
+        <div class="section">
+            <label>Municipio</label>
+            <select id="municipio" onchange="cargarParroquias()">
+                <option value="">Seleccionar</option>
+            </select>
+
+            <label>Parroquia</label>
+            <select id="parroquia">
+                <option value="">Seleccionar</option>
+            </select>
+        </div>
+
+        <!-- 🔹 ASUNTO -->
+        <div class="section">
+            <label>Asunto del reporte</label>
+            <textarea id="asunto"></textarea>
+        </div>
+
+        <!-- 🔹 VEHÍCULO -->
+        <div class="section">
+            <label>Datos del Vehículo</label>
+
+            <label>Marca</label>
+            <select id="marca" onchange="cargarModelos()">
+                <option value="">Seleccionar</option>
+            </select>
+
+            <label>Modelo</label>
+            <select id="modelo" onchange="cargarTipos()">
+                <option value="">Seleccionar</option>
+            </select>
+
+            <label>Color</label>
+            <select id="color">
+                <option value="">Seleccionar</option>
+                <option>Blanco</option>
+                <option>Negro</option>
+                <option>Gris</option>
+                <option>Plateado</option>
+                <option>Rojo</option>
+                <option>Azul</option>
+                <option>Verde</option>
+                <option>Beige</option>
+                <option>Dorado</option>
+            </select>
+
+            <label>Placa</label>
+            <input type="text" id="placa">
+
+            <label>Tipo</label>
+            <select id="tipo">
+                <option value="">Seleccionar</option>
+            </select>
+
+            <label>Área de Visita</label>
+            <select id="area">
+                <option value="">Seleccionar</option>
+                <option>Sala de mando</option>
+            </select>
+        </div>
+
+        <!-- 🔹 AUTORIZACIÓN -->
+        <div class="section">
+            <label>Autorizado por</label>
+            <select id="autoriza">
+                <option value="">Seleccionar</option>
+                <option>Lic. Yormi Herrera</option>
+            </select>
+        </div>
+
+        <!-- 🔹 OPERADOR -->
+        <div class="section">
+            <label>Operador de Guardia</label>
+
+            <select id="operador" onchange="setOperadorCI()">
+                <option value="">Seleccionar</option>
+                <option value="Darwuin Monte" data-ci="25485509">Darwuin Monte</option>
+            </select>
+
+            <label>C.I.</label>
+            <input type="text" id="ci_operador" readonly>
+        </div>
+
+        <!-- 🔹 ODS -->
+        <div class="section">
+            <label>O.D.S</label>
+
+            <select id="ods" onchange="setOdsCI()">
+                <option value="">Seleccionar</option>
+                <option value="Lisandro Heredia" data-ci="11083085">Lisandro Heredia</option>
+            </select>
+
+            <label>C.I.</label>
+            <input type="text" id="ci_ods" readonly>
+        </div>
+
+        <button type="button" onclick="handleSubmit()">Enviar</button>
+    </form>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
