@@ -58,6 +58,25 @@ const DATA_UBICACION = {
     "Sucre": ["Biscucuy", "Concepción", "San Rafael de Palo Alzado", "Uvencio Velásquez", "San José de Saguaz"],
     "Turén": ["Villa Bruzual", "Canelones", "San Isidro Labrador"]
 };
+const DATA_AREAS = [
+    "Sala de mando",
+    "Sala de Maquinas"
+];
+
+const DATA_AUTORIZADOS = [
+    "Lic. Yormi Herrera",
+    "Ing. Ronald Riera"
+];
+
+const DATA_OPERADORES = [
+    { nombre: "Darwuin Monte", ci: "25485509" },
+    { nombre: "Ronald Riera", ci: "5247345" }
+];
+
+const DATA_ODS = [
+    { nombre: "Lisandro Heredia", ci: "11083085" },
+    { nombre: "Rafael Riera", ci: "15868739" }
+];
 
 const WEBHOOK = "https://hook.us2.make.com/gt0oq4o31v1bd1uddgd2u45iyb2o7bsr";
 const WHATSAPP = "573186932091";

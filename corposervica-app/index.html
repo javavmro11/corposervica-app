@@ -15,11 +15,9 @@
 
     <form id="formReporte">
 
-        <!-- 🔹 CLIENTE FIJO -->
         <label>Cliente</label>
         <input type="text" id="cliente" value="CORPOELEC S/E TUREN 1 la colonia" readonly>
 
-        <!-- 🔹 UBICACIÓN -->
         <div class="section">
             <label>Municipio</label>
             <select id="municipio" onchange="cargarParroquias()">
@@ -32,13 +30,11 @@
             </select>
         </div>
 
-        <!-- 🔹 ASUNTO -->
         <div class="section">
             <label>Asunto del reporte</label>
             <textarea id="asunto"></textarea>
         </div>
 
-        <!-- 🔹 VEHÍCULO -->
         <div class="section">
             <label>Datos del Vehículo</label>
 
@@ -77,40 +73,25 @@
             <label>Área de Visita</label>
             <select id="area">
                 <option value="">Seleccionar</option>
-                <option>Sala de mando</option>
             </select>
         </div>
 
-        <!-- 🔹 AUTORIZACIÓN -->
         <div class="section">
             <label>Autorizado por</label>
-            <select id="autoriza">
-                <option value="">Seleccionar</option>
-                <option>Lic. Yormi Herrera</option>
-            </select>
+            <select id="autoriza"></select>
         </div>
 
-        <!-- 🔹 OPERADOR -->
         <div class="section">
             <label>Operador de Guardia</label>
-
-            <select id="operador" onchange="setOperadorCI()">
-                <option value="">Seleccionar</option>
-                <option value="Darwuin Monte" data-ci="25485509">Darwuin Monte</option>
-            </select>
+            <select id="operador" onchange="setOperadorCI()"></select>
 
             <label>C.I.</label>
             <input type="text" id="ci_operador" readonly>
         </div>
 
-        <!-- 🔹 ODS -->
         <div class="section">
             <label>O.D.S</label>
-
-            <select id="ods" onchange="setOdsCI()">
-                <option value="">Seleccionar</option>
-                <option value="Lisandro Heredia" data-ci="11083085">Lisandro Heredia</option>
-            </select>
+            <select id="ods" onchange="setOdsCI()"></select>
 
             <label>C.I.</label>
             <input type="text" id="ci_ods" readonly>

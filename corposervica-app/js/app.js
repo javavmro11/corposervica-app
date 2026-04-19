@@ -1,3 +1,52 @@
+function cargarAreas() {
+    let select = document.getElementById("area");
+    select.innerHTML = '<option value="">Seleccionar</option>';
+
+    DATA_AREAS.forEach(a => {
+        let option = document.createElement("option");
+        option.value = a;
+        option.textContent = a;
+        select.appendChild(option);
+    });
+}
+
+function cargarAutorizados() {
+    let select = document.getElementById("autoriza");
+    select.innerHTML = '<option value="">Seleccionar</option>';
+
+    DATA_AUTORIZADOS.forEach(a => {
+        let option = document.createElement("option");
+        option.value = a;
+        option.textContent = a;
+        select.appendChild(option);
+    });
+}
+
+function cargarOperadores() {
+    let select = document.getElementById("operador");
+    select.innerHTML = '<option value="">Seleccionar</option>';
+
+    DATA_OPERADORES.forEach(o => {
+        let option = document.createElement("option");
+        option.value = o.nombre;
+        option.textContent = o.nombre;
+        option.setAttribute("data-ci", o.ci);
+        select.appendChild(option);
+    });
+}
+
+function cargarODS() {
+    let select = document.getElementById("ods");
+    select.innerHTML = '<option value="">Seleccionar</option>';
+
+    DATA_ODS.forEach(o => {
+        let option = document.createElement("option");
+        option.value = o.nombre;
+        option.textContent = o.nombre;
+        option.setAttribute("data-ci", o.ci);
+        select.appendChild(option);
+    });
+}
 // 🔹 AUTOCOMPLETAR CI
 function setOperadorCI() {
     let select = document.getElementById("operador");
@@ -233,6 +282,11 @@ async function reenviarPendientes() {
     localStorage.setItem("reportes_pendientes", JSON.stringify(restantes));
 }
 
-window.addEventListener("online", reenviarPendientes);
-cargarMunicipios();
-cargarMarcas();
+document.addEventListener("DOMContentLoaded", () => {
+    cargarMunicipios();
+    cargarMarcas();
+    cargarAreas();
+    cargarAutorizados();
+    cargarOperadores();
+    cargarODS();
+});
